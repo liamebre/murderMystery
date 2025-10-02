@@ -49,7 +49,7 @@ void textBox::nextline(Time gt)
 	}
 }
 
-void textBox::update(Text& _text,vector<String> lines, int line)
+void textBox::update(Text& _text,vector<String> lines, int& line)
 {
 	if (isActive && nextLine) {
 		_text.setString(changeText(lines,line));

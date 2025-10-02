@@ -19,7 +19,7 @@ public:
 	void getTextBox(RenderWindow& _window, Text& _text);
 	void activate();
 	void nextline(Time clock);
-	void update(Text& _text, vector<String> lines, int line);
+	void update(Text& _text, vector<String> lines, int& line);
 	String changeText(vector<String> texts, int line);
 
 };

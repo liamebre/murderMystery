@@ -18,7 +18,7 @@ int main()
 	textBox tb(screenSize,text,font);
 
 	vector<String> lines{ "filler 1" };
-	int* currline;
+	//int* currline;
 
 	player p1({ width / 2,height / 2 }, { 30,60 });
 	NPC npc1({ width / 4, height / 4 }, {30,60});
@@ -52,11 +52,12 @@ int main()
 		if (Keyboard::isKeyPressed(Keyboard::Key::D)) {
 			p1.moveright();
 		}
-		lines = npc1.dialogue(p1, tb, lines);	
+	
 
 		npc1.update(dt, p1, tb, lines);
-		p1.update(dt);
+		lines = npc1.dialogue(p1, tb, lines);
 		tb.update(text, lines, npc1.currSay);
+		p1.update(dt);
 		// Update the game state
 		window.clear();
 		tb.getTextBox(window,text);

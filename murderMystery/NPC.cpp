@@ -30,10 +30,11 @@ void NPC::dectectPlayer(player& p, textBox& tb)
 		abs(position.y - p.position.y) < (size.y / 2 + p.size.y / 2 + 30))
 	{
 		// Player is within interaction range
-		currSay = 0; // Reset to the first line of dialogue
 		tb.activate();
+		cout << currSay << endl;
 	}
 	else {
+		currSay = 0;
 		tb.isActive = false;
 	}
 }

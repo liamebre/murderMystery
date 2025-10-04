@@ -1,4 +1,5 @@
 #include "player.h"
+#include "item.h"
 
 player::player(Vector2f _pos, Vector2f _size)
 {
@@ -66,4 +67,5 @@ void player::update(Time dt)
     body.setPosition(position);
     directions = { false, false, false, false };
 }
+
 

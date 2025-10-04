@@ -1,6 +1,7 @@
 #include "textBox.h"
 #include "player.h"
 #include "NPC.h"
+#include "item.h"
 
 int main()
 {
@@ -22,6 +23,7 @@ int main()
 
 	player p1({ width / 2,height / 2 }, { 30,60 });
 	NPC npc1({ width / 4, height / 4 }, {30,60});
+	item item1({ 50.0f,50.0f }, { 30.0f,30.0f });	
 
 	Clock clock;
 	Clock gameClock;
@@ -63,6 +65,7 @@ int main()
 		tb.getTextBox(window,text);
 		window.draw(p1.body);
 		window.draw(npc1.body);
+		window.draw(item1.body);
 		window.display();
 
 	}//end of open window

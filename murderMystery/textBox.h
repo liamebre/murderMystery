@@ -1,5 +1,4 @@
 #pragma once
-#include "inc.h"
 #include "player.h"
 
 class textBox
